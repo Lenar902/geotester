@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  max-width: 1920px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.wrapper div[class$='__container'] {
+  height: 100%;
+  padding: 0 100px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .wrapper div[class$='__container'] {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper div[class$='__container'] {
+    padding: 0 10px;
+  }
+}
+
+.header {
+  display: block;
+  width: 100%;
+  height: 269px;
+  background: url("../imgs/header/background.png") no-repeat center;
+  text-align: center;
+}
+
+.header__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__caption {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+  font-style: bold;
+  margin-bottom: 50px;
+}
+
+.header__text {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.nav__content {
+  margin: 20px 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin: 0 20px 0 0;
+}
+
+.menu__link {
+  color: black;
+  font-size: 1.2rem;
+  transition: all 0.5s 0s ease;
+}
+
+.menu__link:hover {
+  color: #555;
+}
+
+.menu__link i {
+  margin: 0 10px 0 0;
+}
+
+.about-company__container {
+  display: flex;
+  align-items: center;
+}
+
+.about-company__icon {
+  width: 20px;
+  height: 15px;
+  margin: -10px 15px 20px 0;
+  background-color: #2ab482;
+  transform: skewY(-45deg);
+}
+
+@media (max-width: 767px) {
+  .about-company__icon {
+    margin: 10px 15px 15px 0;
+  }
+}
+
+.about-company__title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-style: bold;
+  margin: 20px 0 50px 0;
+}
+
+@media (max-width: 767px) {
+  .about-company__title {
+    margin: 15px 0;
+  }
+}
+
+.company__content {
+  display: flex;
+}
+
+@media (max-width: 1440px) {
+  .company__content {
+    display: block;
+  }
+}
+
+@media (max-width: 992px) {
+  .company__content {
+    text-align: center;
+  }
+}
+
+.company__content .company__grouptext {
+  margin: 0 0 50px 0;
+  text-align: left;
+  background: url("../imgs/header/background-header.png") no-repeat left center;
+}
+
+.company__content .company__grouptext .company__text {
+  text-indent: 15px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.company__content .company__image {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1440px) {
+  .company__content .company__image {
+    width: 300px;
+    float: right;
+  }
+}
+
+@media (max-width: 992px) {
+  .company__content .company__image {
+    float: none;
+  }
+}
+
+.company__btn {
+  width: 250px;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: #17594A;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 2.4;
+  position: relative;
+  cursor: pointer;
+  margin: 0 0 50px 20px;
+  transform: skewX(-45deg);
+  transition: all 0.5s 0s ease;
+}
+
+.company__btn:hover {
+  background-color: #14bf81;
+}
+
+.company__btn p {
+  transform: skewX(45deg);
+}
+
+@media (max-width: 992px) {
+  .company__btn {
+    position: relative;
+    left: 50%;
+    margin: 40px 0 0 -125px;
+  }
+}
+
+.offers {
+  margin: 50px 0;
+  padding: 50px 0;
+  min-height: 868px;
+  background: rgba(240, 240, 240, 0.8) url("../imgs/offer/background.png") top no-repeat;
+}
+
+.offers_center {
+  justify-content: center;
+}
+
+.offers__container {
+  width: 100%;
+  height: 100%;
+}
+
+.offers__items {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1160px;
+  width: 100%;
+}
+
+.offers__item {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  flex: 0 1 20%;
+  transition: all 0.2s 0s ease;
+}
+
+.offers__item:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .offers__item {
+    flex: 0 1 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .offers__item {
+    flex: 0 1 80%;
+  }
+}
+
+.offers__item .offers__img {
+  display: inline-block;
+  width: 100%;
+  height: 250px;
+}
+
+.offers__item .offers__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offers__item .offers__btn {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #17594A;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s 0s ease;
+}
+
+.offers__item .offers__btn p {
+  width: 90%;
+  margin: 0 10px 0 0;
+  line-height: 1.2;
+  align-self: center;
+}
+
+.offers__item .offers__btn i {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+
+.offers__item .offers__btn:hover {
+  background-color: #14bf81;
+}
+/*# sourceMappingURL=index.css.map */
