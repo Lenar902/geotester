@@ -102,6 +102,7 @@ div[class$='_center'] {
     margin: 20px 0 50px 0;
     @include breakpoint(md) {
         margin: 15px 0;
+        font-size: 2rem;
     }  
   }
 
@@ -344,4 +345,105 @@ input[type=radio]:checked + .cert__tab {
     }/*end sert column*/
 }/*end sert row*/
 
- 
+//provide 
+.provide {
+    padding: 50px 0;
+    background: rgba(240,240,240,0.8) url("../imgs/provide/background.png") top no-repeat; 
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    .overlay1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(240,240,240,0.8);
+        z-index: 1;
+    }
+    .about-company_zindex {
+        position: relative;
+        z-index: 2;
+    }
+    &__row {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;  
+        @include breakpoint(lg) {
+            flex-direction: column;         
+        }      
+    }
+    &__item1 {
+        flex: 0 1 70%;
+        margin: 0 30px 0 0;
+        @include breakpoint(lg) {
+            flex: 0 0 100%;       
+        } 
+    }
+    &__item2 {
+        flex: 0 0 30%;
+            
+        @include breakpoint(lg) {
+            flex: 0 0 150px;
+            margin: 20px 0;
+            text-align: center;       
+        } 
+        img {
+            max-width: 100%;
+        }
+    }
+    &__text {
+        text-indent: 15px;
+        font-size: 1.4rem;
+        line-height: 1.6;                       
+    }
+} //end-provide
+
+//footer 
+.about-company_color {
+    color: white;   
+}
+.icon_color {
+    background-color: white;
+    @include breakpoint(lg) {
+        background-color: transparent;
+    }
+}
+.company__btn_zindex {
+    position: relative;
+    z-index: 2;
+    left: 0;
+    margin: 0;
+}
+.footer {
+    margin: 50px 0 0 0;
+    padding: 50px 0;
+    background: rgba(240,240,240,0.8) url("../imgs/footer/background.png") top no-repeat; 
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    .overlay2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,120,240,0.5);
+        z-index: 1;
+    }
+    &__text_zindex, .about-company_zindex {
+        position: relative;
+        z-index: 2;
+    }
+    &__text_color {
+        color: white;
+    }
+    &__container {
+        text-align: center;
+    }
+    &__text {
+        font-size: 1.5rem;
+        margin: 0 0 50px 0;
+    }
+}
