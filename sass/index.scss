@@ -3,11 +3,6 @@
 @import "./reset";
 @import "./media";
 
-img {
-    max-width: 100%;
-    object-fit: contain;
-}
-
 .wrapper {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;  
@@ -68,6 +63,10 @@ img {
     &__link {
         color: black;
         font-size: 1.2rem;
+        -webkit-transition: all 0.5s 0s ease;
+        -moz-transition: all 0.5s 0s ease;
+        -o-transition: all 0.5s 0s ease;
+        transition: all 0.5s 0s ease;
         &:hover {
             color: #555;
         }
@@ -78,9 +77,13 @@ img {
     }
 }
 
+// about company (repeat)
 .about-company__container {
     display: flex;
     align-items: center;     
+}
+div[class$='_center'] {
+    justify-content: center;
 }
 .about-company__icon {    
     width: 20px;
@@ -122,6 +125,8 @@ img {
           }
       }
       .company__image {
+            max-width: 100%;
+            object-fit: contain;
             @include breakpoint(biglg) { 
                 width: 300px;                              
                 float: right;
@@ -143,6 +148,10 @@ img {
     cursor: pointer; 
     margin: 0 0 50px 20px;  
     transform: skewX(-45deg); 
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
     &:hover  {
         background-color: #14bf81;
     }
@@ -156,4 +165,183 @@ img {
     }
   }
   
-  
+  //offers
+  .offers {
+    margin: 50px 0;
+    padding: 50px 0;
+    min-height: 868px;
+    background: rgba(240,240,240,0.8) url("../imgs/offer/background.png") top no-repeat; 
+   
+    &__container {
+        width: 100%;
+        height: 100%;
+    }
+    &__items {
+        margin: 0 auto;
+        display: flex;    
+        flex-wrap: wrap;      
+        align-items: center; 
+        justify-content: center;
+        max-width: 1160px; 
+        width: 100%;             
+    }
+ 
+    &__item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        flex: 0 1 20%;
+        -webkit-transition: all 0.2s 0s ease;
+        -moz-transition: all 0.2s 0s ease;
+        -o-transition: all 0.2s 0s ease;
+        transition: all 0.2s 0s ease;
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+
+        @include breakpoint(lg) {
+            flex: 0 1 40%;
+        } 
+        @include breakpoint(sm) {
+            flex: 0 1 80%;
+        } 
+        .offers__img {
+            display: inline-block;
+            width: 100%;
+            height: 250px;  
+                    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .offers__btn {
+            display: flex;
+            width: 100%;  
+            height: 50px;      
+            background-color:#17594A;	
+            position: relative;
+            color: #fff;
+            text-align: center;
+            -webkit-transition: all 0.5s 0s ease;
+            -moz-transition: all 0.5s 0s ease;
+            -o-transition: all 0.5s 0s ease;
+            transition: all 0.5s 0s ease;
+            p {
+                width: 90%;                
+                margin: 0 10px 0 0;                
+                line-height: 1.2;
+                align-self: center;                
+            }
+            i {
+                position: absolute;
+                right: 5px;
+                top: 20px;
+            }
+
+            &:hover {
+                background-color: #14bf81;                
+            }
+        }
+    }
+  }
+
+
+  //cert
+input[type="radio"] {
+	display: none;
+}
+/* Checked */
+input[type=radio]:checked + .cert__tab {
+    background-color: #14bf81; 
+    color: #fff;
+}
+.cert__btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .cert__tab {      
+        display: inline-block;
+        line-height: 1.5;             
+        height: 35px;          
+        padding: 5px;
+        margin: 0 10px;
+        background-color: white;
+        border: 1px solid green;
+        color: black;     
+        text-align: center;
+        font-weight: 400;
+        font-size: 1rem;
+        cursor: pointer;
+        user-select: none;
+        -webkit-transition: all 0.5s 0s ease;
+        -moz-transition: all 0.5s 0s ease;
+        -o-transition: all 0.5s 0s ease;
+        transition: all 0.5s 0s ease;
+        @include breakpoint(biglg) {
+            flex: 0 1 20%;
+            margin: 15px 10px;
+            padding: 10px;
+            height: 40px; 
+            display: inline-flex;         
+            align-items: center;
+            justify-content: center;
+        } 
+        @include breakpoint(md) {
+            flex: 0 1 40%;
+        }  
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+
+.cert__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    .cert__column {
+        margin: 15px;  
+        text-align: center; 
+        position: relative;  
+        @include breakpoint(biglg) {
+            flex: 0 1 40%;            
+        }                 
+        
+        .overlay {
+            display: none;
+            background-color: rgba(0,0,0,0);            
+            position: absolute;
+            text-align: center; 
+            width: 245px;            
+            height: 100%;
+            left: calc(50% - 122px);
+            top: 0;  
+            z-index: 0;                                                    
+        }
+        img[src$='cert.png'] {
+            cursor: pointer;            
+        }
+        img[src$='cert.png']:hover ~ .overlay {
+            display: inline-block;           
+            z-index: 9;            
+            background-color: rgba(0,150,0,0.3);  
+            img {
+                position: relative;
+                top: calc(50% - 53px);
+            }                  
+        }
+
+    }/*end sert column*/
+}/*end sert row*/
+
+ 
