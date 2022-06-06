@@ -66,11 +66,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-img {
-  max-width: 100%;
-  object-fit: contain;
-}
-
 .wrapper {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -141,6 +136,7 @@ img {
 .menu__link {
   color: black;
   font-size: 1.2rem;
+  transition: all 0.5s 0s ease;
 }
 
 .menu__link:hover {
@@ -154,6 +150,10 @@ img {
 .about-company__container {
   display: flex;
   align-items: center;
+}
+
+div[class$='_center'] {
+  justify-content: center;
 }
 
 .about-company__icon {
@@ -211,6 +211,11 @@ img {
   line-height: 1.6;
 }
 
+.company__content .company__image {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 @media (max-width: 1440px) {
   .company__content .company__image {
     width: 300px;
@@ -236,6 +241,7 @@ img {
   cursor: pointer;
   margin: 0 0 50px 20px;
   transform: skewX(-45deg);
+  transition: all 0.5s 0s ease;
 }
 
 .company__btn:hover {
@@ -253,4 +259,197 @@ img {
     margin: 40px 0 0 -125px;
   }
 }
+
+.offers {
+  margin: 50px 0;
+  padding: 50px 0;
+  min-height: 868px;
+  background: rgba(240, 240, 240, 0.8) url("../imgs/offer/background.png") top no-repeat;
+}
+
+.offers__container {
+  width: 100%;
+  height: 100%;
+}
+
+.offers__items {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1160px;
+  width: 100%;
+}
+
+.offers__item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  flex: 0 1 20%;
+  transition: all 0.2s 0s ease;
+}
+
+.offers__item:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .offers__item {
+    flex: 0 1 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .offers__item {
+    flex: 0 1 80%;
+  }
+}
+
+.offers__item .offers__img {
+  display: inline-block;
+  width: 100%;
+  height: 250px;
+}
+
+.offers__item .offers__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offers__item .offers__btn {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #17594A;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s 0s ease;
+}
+
+.offers__item .offers__btn p {
+  width: 90%;
+  margin: 0 10px 0 0;
+  line-height: 1.2;
+  align-self: center;
+}
+
+.offers__item .offers__btn i {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+
+.offers__item .offers__btn:hover {
+  background-color: #14bf81;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Checked */
+input[type=radio]:checked + .cert__tab {
+  background-color: #14bf81;
+  color: #fff;
+}
+
+.cert__btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert__btns .cert__tab {
+  display: inline-block;
+  line-height: 1.5;
+  height: 35px;
+  padding: 5px;
+  margin: 0 10px;
+  background-color: white;
+  border: 1px solid green;
+  color: black;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.5s 0s ease;
+}
+
+@media (max-width: 1440px) {
+  .cert__btns .cert__tab {
+    flex: 0 1 20%;
+    margin: 15px 10px;
+    padding: 10px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .cert__btns .cert__tab {
+    flex: 0 1 40%;
+  }
+}
+
+.cert__btns .cert__tab:hover {
+  background-color: #ddd;
+}
+
+.cert__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  /*end sert column*/
+}
+
+.cert__row .cert__column {
+  margin: 15px;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 1440px) {
+  .cert__row .cert__column {
+    flex: 0 1 40%;
+  }
+}
+
+.cert__row .cert__column .overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  text-align: center;
+  width: 245px;
+  height: 100%;
+  left: calc(50% - 122px);
+  top: 0;
+  z-index: 0;
+}
+
+.cert__row .cert__column img[src$='cert.png'] {
+  cursor: pointer;
+}
+
+.cert__row .cert__column img[src$='cert.png']:hover ~ .overlay {
+  display: inline-block;
+  z-index: 9;
+  background-color: rgba(0, 150, 0, 0.3);
+}
+
+.cert__row .cert__column img[src$='cert.png']:hover ~ .overlay img {
+  position: relative;
+  top: calc(50% - 53px);
+}
+
+/*end sert row*/
 /*# sourceMappingURL=index.css.map */
