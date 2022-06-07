@@ -1,0 +1,135 @@
+@import "./media";
+
+body.lock {
+    overflow: hidden;
+}
+%tplinput {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: #ddd;
+    margin: 30px 0;
+    padding: 15px 5px;
+    font-size: 1.2rem;
+    border-top: 3px solid gray;
+    border-left: 3px solid gray;
+}
+.modal-dialog__container {
+    display: none;
+}
+.form {
+    background: url("../imgs/bg_modal.png");
+    background-size: cover;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, .3);
+    position: fixed;
+    z-index: 19;
+    width: 80%;
+    max-width: 500px;
+    min-height: 480px;
+    top: 100px;
+    left: calc(50% - 250px);  
+    color: #000;
+    padding: 15px;
+    border-radius: 5px;
+    @include breakpoint(md) {
+        max-width: 300px;
+        min-height: 550px;
+        left: calc(50% - 150px);
+    }
+}
+.form__close {
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    cursor: pointer;    
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    &:hover {
+        transform: rotate(180deg);
+    }
+}
+.form__title {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 5px 0 30px 0;
+    width: 90%;
+}
+.form__name {
+    @extend %tplinput;
+}
+.form__email {
+    @extend %tplinput;
+}
+.form__text {
+    @extend %tplinput;
+}
+.form__checkbox {
+    margin: 25px 0;
+    @include breakpoint(md) {
+        margin: 15px 0;
+    }   
+}
+.form__label {
+    font-size: 1.4rem;    
+}
+.form__submit {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background-color:  darkblue;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;     
+    bottom: 20px;
+    left: calc(50% - 75px);
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    &:hover {
+        background-color: rgb(92, 92, 196);
+        color: black
+    }
+}
+
+/*===============*/
+.modal__row {    
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, .3);
+    position: fixed;
+    z-index: 19;
+    width: 80%;
+    width: 255px;
+    height: 360px;
+    top: 100px;
+    left: calc(50% - 132px);  
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+.cert-close {
+    position: absolute;
+    padding: 0 5px;
+    right: -10px;
+    top: -10px;
+    border-radius: 50%;
+    background-color: rgb(2, 17, 17);
+    color: white;
+    font-size: 1.5rem;   
+    font-family: sans-serif;
+    cursor: pointer;    
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    &:hover {
+        color: rgb(2, 17, 17);
+        background-color: white;
+
+    }
+}
