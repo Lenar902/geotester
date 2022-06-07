@@ -10,6 +10,18 @@
 </head>
 
 <body>
+	<div class="preloader" id="preloader">
+		<div id="spinningSquaresG">
+			<div id="spinningSquaresG_1" class="spinningSquaresG"></div>
+			<div id="spinningSquaresG_2" class="spinningSquaresG"></div>
+			<div id="spinningSquaresG_3" class="spinningSquaresG"></div>
+			<div id="spinningSquaresG_4" class="spinningSquaresG"></div>
+			<div id="spinningSquaresG_5" class="spinningSquaresG"></div>
+			<div id="spinningSquaresG_6" class="spinningSquaresG"></div>
+			<div id="spinningSquaresG_7" class="spinningSquaresG"></div>
+			<div id="spinningSquaresG_8" class="spinningSquaresG"></div>
+		</div>
+	</div>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
@@ -61,7 +73,7 @@
 				</div>
 				<img class="company__image" src="imgs/header/main-logo.png" alt="main-logo">
 			</div>
-			<button class="company__btn">
+			<button id="open-modal-company" class="company__btn">
 				<p>Обратиться к специалисту</p>
 			</button>
 		</div>
@@ -266,16 +278,37 @@
 						</h2>
 					</div>
 					<h4 class="footer__text footer__text_zindex footer__text_color">Только оставьте заявку</h4>
-					<button class="company__btn company__btn_zindex">
+					<button id="open-modal" class="company__btn company__btn_zindex">
 						<p>Оставить заявку</p>
 					</button>
 				</div>
 			</div>	
 		</footer>
 
+		<!--modal dialogs-->
+		<div id="modal-dialog" class="modal-dialog__container">		
+			<form class="form" action="#">
+				<span id="close" class="form__close">X</span>
+				<h3 class="form__title">Оставьте заявку, и мы свяжемся с вами</h3>
+				<input class="form__name" id="name" type="text" placeholder="Ваше имя" required>			
+				<input class="form__email" id="email" type="text" placeholder="E-mail" required>
+				<textarea class="form__text" name="message" id="message" placeholder="Ваше сообщение" required></textarea>
+				<input class="form__checkbox" id="check" type="checkbox" name="check" required>
+				<label class="form__label" for="check">Я согласен с предоставлением персональных данных</label>
+				<input class="form__submit" id="send" type="submit" value="Оставить заявку">				
+			</form>		
+		</div>
+
+		<div id="modal-dialog-cert" class="modal-dialog__container">
+			<div class="modal__row">	
+				<span id="close-cert" class="cert-close">X</span>
+				<img src="./imgs/certificates/cert.png" alt="certificates-md">
+			</div>
+		</div>
+
 	</div><!--end wrapper-->
 
-	<!--     <script src="script.js"></script>      -->
+	<script src="./scripts/script.js"></script>
 
 	</body>
 </html>
