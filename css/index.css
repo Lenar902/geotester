@@ -91,6 +91,7 @@ body.lock {
   background-size: cover;
   box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
   position: fixed;
+  overflow: auto;
   z-index: 19;
   width: 80%;
   max-width: 500px;
@@ -104,6 +105,7 @@ body.lock {
 
 @media (max-width: 767px) {
   .form {
+    top: 10px;
     max-width: 300px;
     min-height: 550px;
     left: calc(50% - 150px);
@@ -533,6 +535,8 @@ div[class$='_center'] {
   padding: 50px 0;
   min-height: 868px;
   background: rgba(240, 240, 240, 0.8) url("../imgs/offer/background.png") top no-repeat;
+  opacity: 0;
+  animation: aniopacity 5s linear forwards;
 }
 
 .offers__container {
@@ -613,6 +617,15 @@ div[class$='_center'] {
 
 .offers__item .offers__btn:hover {
   background-color: #14bf81;
+}
+
+@keyframes aniopacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 input[type="radio"] {
